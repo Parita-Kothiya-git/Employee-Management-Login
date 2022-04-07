@@ -1,0 +1,18 @@
+﻿{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "target": "ES5",
+        "baseUrl": "src",
+        "paths": {
+            "@/*": [
+                "app/*"
+            ]
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "declaration": false
+    }
+}

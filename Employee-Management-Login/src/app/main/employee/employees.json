@@ -1,0 +1,52 @@
+{
+    "employees":[ 
+        {
+            "eId":1,
+            "eName":"Parita",
+            "position":"Employee",
+            "jDate":"02/11/2021"
+        },
+        {
+            "eId":2,
+            "eName":"Tanvi",
+            "position":"Administration",
+            "jDate":"02/12/2021"
+        },
+        {
+            "eId":3,
+            "eName":"Ami",
+            "position":"Peon",
+            "jDate":"12/01/2022"
+        },
+        {
+            "eId":4,
+            "eName":"Pritesh",
+            "position":"Project Manager",
+            "jDate":"12/02/2020"
+        },  
+        {
+            "eId":5,
+            "eName":"Rohan",
+            "position":"Team Leader",
+            "jDate":"02/11/2021"
+        },
+        {
+            "eId":6,
+            "eName":"Aman",
+            "position":"Trainer",
+            "jDate":"08/02/2018"
+        },
+        {
+            "eId":7,
+            "eName":"Jay",
+            "position":"HR",
+            "jDate":"12/01/2017"
+        },
+        {
+            "eId":8,
+            "eName":"Mahesh",
+            "position":"Designer",
+            "jDate":"12/02/2020"
+        }
+    ]
+}

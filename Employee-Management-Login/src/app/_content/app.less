@@ -1,0 +1,185 @@
+// global application styles
+a {
+    cursor: pointer;
+}
+#sidebar {
+    overflow: hidden;
+    z-index: 3;
+}
+#sidebar .list-group {
+    min-width: 400px;
+    background-color: #191919;
+    min-height: 100vh;
+}
+#sidebar i {
+    margin-right: 6px;
+}
+
+#sidebar .list-group-item {
+    border-radius: 0;
+    background-color: #191919;
+    color: #EEE;
+    border-left: 0;
+    border-right: 0;
+    border-color: #262626;
+    white-space: nowrap;
+}
+
+/* highlight active menu */
+#sidebar .list-group-item:not(.collapsed) {
+    background-color: #161616;
+}
+
+/* closed state */
+#sidebar .list-group .list-group-item[aria-expanded="false"]::after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+}
+
+/* open state */
+#sidebar .list-group .list-group-item[aria-expanded="true"] {
+  background-color: #222;
+}
+#sidebar .list-group .list-group-item[aria-expanded="true"]::after {
+  content: "";
+  font-family: FontAwesome;
+  display: inline;
+  text-align: right;
+  padding-left: 5px;
+}
+
+/* level 1*/
+#sidebar .list-group .collapse .list-group-item,
+#sidebar .list-group .collapsing .list-group-item  {
+  padding-left: 20px;
+}
+
+/* level 2*/
+#sidebar .list-group .collapse > .collapse .list-group-item,
+#sidebar .list-group .collapse > .collapsing .list-group-item {
+  padding-left: 30px;
+}
+
+/* level 3*/
+#sidebar .list-group .collapse > .collapse > .collapse .list-group-item {
+  padding-left: 40px;
+}
+
+@media (max-width:768px) {
+    #sidebar {
+        min-width: 35px;
+        max-width: 40px;
+        overflow-y: auto;
+        overflow-x: visible;
+        transition: all 0.25s ease;
+        transform: translateX(-45px);
+        position: fixed;
+    }
+    
+    #sidebar.show {
+        transform: translateX(0);
+    }
+
+    #sidebar::-webkit-scrollbar{ width: 0px; }
+    
+    #sidebar, #sidebar .list-group {
+        min-width: 1px;
+        overflow: visible;
+    }
+    /* overlay sub levels on small screens */
+    #sidebar .list-group .collapse.show, #sidebar .list-group .collapsing {
+        position: relative;
+        z-index: 1;
+        width: 190px;
+        top: 0;
+    }
+    #sidebar .list-group > .list-group-item {
+        text-align: center;
+        padding: .75rem .5rem;
+    }
+    /* hide caret icons of top level when collapsed */
+    #sidebar .list-group > .list-group-item[aria-expanded="true"]::after,
+    #sidebar .list-group > .list-group-item[aria-expanded="false"]::after {
+        display:none;
+    }
+}
+
+
+
+header {
+  padding: 20px 20px;
+  box-shadow: 0px 4px 10px rgba(49, 39, 39, 0.1);
+  background: #fff;
+  z-index: 99;
+}
+
+.main-content{
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form {
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+
+.register-form {
+  width: 400px;
+  height: auto;
+  padding: 20px;
+  background: #f2f2f2;
+  border-radius: 5px;
+}
+
+.btn-black {
+  color: #fff !important;
+  background-color: #191919;
+  border-color: #191919 ;
+}
+
+.btn-black:hover,
+.btn-black:focus,
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: #191919 !important;
+  background-color: #fff;
+  border-color: #191919 ;
+}
+
+.table-bordered thead th,
+.table-bordered tbody td {
+  vertical-align: middle;
+  padding: 0 15px;
+}
+
+#sidebar {
+  border-right: 1px solid #dee2e6;
+}
+
+.navbar-nav .nav-link {
+  color: #000;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+}
+
+.w-45 {
+  width: 48%;
+}
+
+.content-right {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 20%;
+}
